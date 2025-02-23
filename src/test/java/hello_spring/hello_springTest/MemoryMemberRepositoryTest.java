@@ -16,6 +16,7 @@ public class MemoryMemberRepositoryTest {
     public void clear(){
         repos.clearStore();
     }
+
     @Test
     public void save(){
 
