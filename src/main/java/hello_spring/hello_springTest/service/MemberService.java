@@ -1,5 +1,6 @@
 package hello_spring.hello_springTest.service;
 
+import hello_spring.hello_springTest.repository.MemberRepository;
 import hello_spring.hello_springTest.repository.MemoryMemberRepository;
 import hello_spring.hello_springTest.domain.Member;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,13 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public class MemberService {
     
-    private MemoryMemberRepository memberRepository;
+    private MemberRepository memberRepository;
 
-    @Autowired
-    public MemberService(MemoryMemberRepository memberrepository){
+    public MemberService(MemberRepository memberrepository){
 
         this.memberRepository=memberrepository;
     }
